@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: shimingzhe
- * Date: 18-9-22
- * Time: 下午2:57
+ * Date: 18-10-4
+ * Time: 下午4:25
  */
 
 namespace App\Models;
@@ -11,16 +11,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Poetries extends Model
+class Role extends Model
 {
     //指定表名
-    protected $table = 'mv_poetry';
+    protected $table = 'mk_role';
 
     //指定主键
     protected $primaryKey = 'id';
 
     public $timestamps = false;
 
-    protected $fillable = ['title', 'author', 'content', 'mp3_url', 'is_available'];
-
+    protected $fillable = ['name'];
 }

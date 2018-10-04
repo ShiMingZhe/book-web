@@ -153,7 +153,7 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{@url("/login_out")}}" class="btn btn-default btn-flat">退出</a>
                             </div>
                         </li>
                     </ul>

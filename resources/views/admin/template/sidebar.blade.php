@@ -31,7 +31,9 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li><a href="/listen"><i class="fa fa-book"></i> <span>扫码听</span></a></li>
+            <li><a href="{{@url("/listen")}}"><i class="fa fa-book"></i> <span>听诗管理</span></a></li>
+            <li><a href="{{@url("/user/admin/index")}}"><i class="fa fa-user"></i> <span>人员管理</span></a></li>
+            <li><a href="{{@url("/task/admin/index")}}"><i class="fa fa-tasks"></i> <span>任务管理</span></a></li>
             {{--<li class="active treeview menu-open">
                 <a href="/listen">
                     <i class="fa fa-book"></i> <span>扫码听</span>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Poetries;
+use App\Models\Task;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -23,7 +25,18 @@ class AdminController extends Controller
         if (!empty($input)) {
             $res = Poetries::create($input);
             if ($res) {
-                return redirect("/listen");
+                $task = Task::create([
+                    'name' => $input['title'],
+                    'type' => '1',
+                    'is_pass' => '0',
+                    'operator' => Session::get('user')->first()->name,
+                    'task_id' => $input['id'],
+                ]);
+                if ($task) {
+                    return redirect("/listen");
+                }
+
+                return view('admin/listenAdd');
             }
         }
 
@@ -34,7 +47,6 @@ class AdminController extends Controller
     public function editor($poetryId)
     {
         $data = Poetries::find($poetryId);
-
 
         return view('admin.listenEditor',['data' => $data]);
     }

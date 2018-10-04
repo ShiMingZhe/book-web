@@ -31,29 +31,29 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">管理员登陆</p>
 
         <form action="{{@url("/login/validation")}}" method="post">
             {{csrf_field()}}
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email" name="email">
+                <input type="email" class="form-control" placeholder="邮箱" name="email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="密码" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox"> Remember Me
+                            <input type="checkbox"> 记住？
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">登陆</button>
                 </div>
                 <!-- /.col -->
             </div>
@@ -61,8 +61,8 @@
 
         <!-- /.social-auth-links -->
 
-        <a href="#">I forgot my password</a><br>
-        <a href="{{@url("/register")}}" class="text-center">Register a new membership</a>
+        <a href="#">忘记密码？</a><br>
+        <a href="{{@url("/register")}}" class="text-center">注册成为管理员</a>
 
     </div>
     <!-- /.login-box-body -->

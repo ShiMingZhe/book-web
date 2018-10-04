@@ -33,23 +33,24 @@
     </div>
 
     <div class="register-box-body">
-        <p class="login-box-msg">Register a new membership</p>
+        <p class="login-box-msg">注册成为管理员</p>
 
         <form action="{{@url("/register_save")}}" method="post">
+            {{csrf_field()}}
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Full name" name="name">
+                <input type="text" class="form-control" placeholder="姓名" name="name">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email" name="email">
+                <input type="email" class="form-control" placeholder="邮箱" name="email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="密码" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Retype password" name="retype_password">
+                <input type="password" class="form-control" placeholder="确认密码" name="retype_password">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             <div class="form-group">
@@ -59,23 +60,27 @@
                     <option value="2">未知</option>
                 </select>
             </div>
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="手机" name="phone">
+                <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="昵称" name="nickname">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
             <div class="row">
                 <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox"> I agree to the <a href="#">terms</a>
-                        </label>
-                    </div>
+                    <a href="{{@url('/login')}}" class="text-center btn btn-default btn-flat">登陆</a>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">注册</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{@url('/login')}}" class="text-center">I already have a membership</a>
+
     </div>
     <!-- /.form-box -->
 </div>
